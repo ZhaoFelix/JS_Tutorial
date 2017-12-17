@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JS面向对象</title>
+    <script type="text/javascript">
+      var box = new Object();
+      box.name = 'Felix';//创建一个对象
+      box.age = 23;//对象属性赋值
+      //创建一个对象方法
+      box.num = function() {
+        return this.name+this.age+'运行中。。。';
+      }
+      console.log(box.num());
+
+      //工厂模式
+      function createObject(name,age) {
+        var obj = new Object();
+        obj.name = name;
+        obj.age = age;
+        obj.run = function() {
+          return this.name+this.age+'运行中..';
+        };
+        return obj;
+      }
+      var obj1 = createObject('Felix23',34);
+      console.log(obj1.run());
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

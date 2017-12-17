@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>面向对象下</title>
+    <script type="text/javascript">
+    //构造函数
+    /*
+    构造函数没有new object，但它后台会自动var obj = new Object()
+    this 相当于 obj
+    构造函数不需要返回对象引用，它是后台自动返回的
+    */
+
+    /*
+    构造函数也是函数，但是函数名的首字母必须要大写
+    必须new构造函数名
+    必须使用new运算符
+
+    */
+      function Box(name,age) {
+        this.name = name;
+        this.age = age;
+        this.run = function() {
+          return this.name + this.age +'运行中..';
+        };
+      }
+      var box = new Box('Lee',23);
+      console.log(box.run());
+      var box1 = new Box('Lee1',34);
+      console.log(box1.run());
+      console.log(box instanceof Box);
+      console.log(box1 instanceof Object);
+      console.log(box.name == box1.name);
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

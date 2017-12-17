@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html;charset=utf-8">
+  <title>内置对象</title>
+  <script type="text/javascript">
+    var box = "//内置对象";
+    a = encodeURI(box);//只对中文进行编码
+    b = encodeURIComponent(box);//编码的方式更加彻底
+    console.log(a);
+    console.log(b);
+    //解码
+    c = decodeURI(a);
+    d = decodeURIComponent(b);
+    console.log(c);
+    console.log(d);
+    //eval()方法
+    eval('var ad = 100 ');//对字符串进行解析
+    alert(ad);
+  </script>
+</head>
+<body>
+
+</body>
+</html>
