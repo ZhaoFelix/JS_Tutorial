@@ -14,6 +14,10 @@
       console.log(box.num());
 
       //工厂模式
+      /*
+      工厂模式解决了实例化的问题，但是无法搞清楚是那个对象的实例
+
+      */
       function createObject(name,age) {
         var obj = new Object();
         obj.name = name;
@@ -21,7 +25,7 @@
         obj.run = function() {
           return this.name+this.age+'运行中..';
         };
-        return obj;
+        return obj;//返回对象引用
       }
       var obj1 = createObject('Felix23',34);
       console.log(obj1.run());

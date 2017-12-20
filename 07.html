@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+      BOM
+    </title>
+    <script type="text/javascript">
+    //JS不支持多线程
+      setTimeout("alert('Lee')",2000);
+
+      /*推荐使用的方法*/
+      function box() {
+        alert('Less')
+      }
+      setTimeout(box,2000)
+
+      //扩展性好，封装性好
+      setTimeout(function () {
+        alert('Fee')
+      },3000);
+
+      /*
+      setTimeout会返回一个ID
+      可以根据ID取消定时器
+      */
+      var id = setTimeout(function() {
+        alert("返回一个ID");
+      },5000);
+      clearTimeout(id);//取消超时调用
+
+
+      var box = setInterval(function() {
+        alert('重复循环调用');
+      },100);
+      clearInterval(box);
+
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>window对象</title>
+  </head>
+    <script type="text/javascript">
+    /*
+    火狐浏览器不支持
+    */
+      console.log(screenLeft);
+      console.log(screenTop);
+      /*
+      IE不支持
+      */
+      console.log(window.screenX);
+      console.log(window.screenY);
+
+      var leftX = typeof window.screenLeft == 'number' ? window.screenLeft:window.screenX
+      //获取窗口页面的大小
+      console.log(window.innerHeight);
+      console.log(window.innerWidth);
+      //窗口页面+边框大小
+      console.log(window.outerHeight);
+      console.log(window.outerWidth);
+
+      //
+      
+    </script>
+  <body>
+
+  </body>
+</html>

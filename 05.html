@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+      BOM_Window对象
+    </title>
+    <script type="text/javascript">
+      /*
+      window对象是最顶层的对象
+      window对象有六大属性
+      window对象下的document属性，也是对象，并且document对象也有五大属性
+      */
+      isWho = confirm('请确认。。');//本身方法返回bool值，点击缺点返回true，点击取消返回false
+      if (isWho) {
+        console.log(isWho);
+      }
+      else {
+        console.log(isWho);
+      }
+      /*
+      参数一：导航到的URL
+      参数二：窗口的名称,相同名称的命名将在同一窗口打开。_blank(新建一个窗口)，_parent(在本窗口新建)
+      参数三：特定的字符串，设置窗口的属性
+      */
+      open('http://www.baidu.com','baidu','width=200px,height=200px,top=10px,left=10px');
+      window.onclick = function() {
+        console.log('屏幕点击事件');
+      }
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
