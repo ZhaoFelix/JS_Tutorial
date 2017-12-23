@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+  js库之连缀
+    </title>
+    <style media="screen">
+
+    </style>
+  </head>
+  <script type="text/javascript">
+  // //写一个Base属性
+  // var Base = {
+  //   getId:function(id){
+  //     return document.getElementById(id);
+  //   },
+  //   getName:function(name){
+  //     return document.getElementByName(name);
+  //   },
+  //   getTagName:function(tag){
+  //     return document.getElementByTagName(tag);
+  //   }
+  // };
+  var $ = function(){
+    return new Base();
+  }
+  function Base(){
+    // 创建一个数组用来保存获取的节点和节点数组
+    this.elements = [];
+    //获取ID节点
+    this.getId = function (id) {
+      this.elements.push(document.getElementById(id));
+      return this
+    };
+
+    // 获取元素的节点
+    this.getTagName = function(tag){
+      var tags = document.getElementsByTagName(tag);
+      for (var i = 0; i < tags.length; i++) {
+        this.elements.push(tags[i]);
+      }
+      console.log(tags.length);
+      return this;
+    }
+  }
+  Base.prototype.css = function(attr,value){
+    for (var i = 0; i < this.elements.length; i++) {
+        this.elements[i].style[attr] = value;
+    }
+    return this;
+  }
+  Base.prototype.html = function(str) {
+      for (var i = 0; i < this.elements.length; i++) {
+        this.elements[i].innerHTML = str;
+      }
+      return this;
+  }
+  Base.prototype.click = function(funcName){
+    for (var i = 0; i < this.elements.length; i++) {
+      this.elements[i].onclick = funcName;
+    }
+    return this;
+  }
+
+
+
+    window.onload = function(){
+      // alert(Base.getId('box'));
+      var base = new Base();
+      $().getId('box').css('color','red');
+      //alert(base.getTagName('p').elements.length);//节点元素的数量
+      $().getTagName('p').css('font-size','20px').css('backgroundColor','black').click(function(){
+        alert('click');
+      });
+    }
+  </script>
+  <body>
+  <div id="box">
+    box
+  </div>
+  <p>段落</p>
+  <p>段落2</p>
+  <p>段落3</p>
+  </body>
+</html>
