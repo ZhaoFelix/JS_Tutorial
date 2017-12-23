@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>原型创建对象的缺点</title>
+  </head>
+  <script type="text/javascript">
+    //原型对象的构造函数忽略来传参的过程，就会导致对象的初始化的值都是一致的
+    function Box() {}
+    Box.prototype = {
+      constructor:Box,
+      name:'Felix ',
+      age:1002,
+      family:['测试','测试2','测试3'],
+      run:function(){
+        return this.name + this.age + '运行中。。';
+      }
+    };
+    var box = new Box();
+    console.log(box.name);
+    console.log(box.family.push('测试4'));
+    console.log(box.family);
+
+    var box1 = new Box();
+    console.log(box1.family);
+
+
+      //组合构造函数+原型模式
+
+      //独立部分使用构造函数
+      function Box(name,age){
+        this.age = age;
+        this.name = name;
+        this.family = ['测试','测试2','测试3','测试4'];
+      }
+      //共享部分使用原型
+      Box.prototype = {
+        constructor:Box,
+        run:function(){
+          return this.name + this.age + '运行中。。'
+        }
+      }
+
+      var box2 = new Box('Felix1',201);
+      var box3 = new Box('Felix2',200);
+      console.log(box2.run());
+      console.log(box3.run());
+
+      //动态原型模型
+      function Box1(name,age){
+        this.name = name;
+        this.age = age;
+        //设置原型只被初始化一次
+        //判断this.run 方法是否存在
+        if (typeof this.run != 'function') {
+          console.log('初始化开始');
+          Box.prototype.run  = function(){
+            return this.age + this.name + '动态原型模型。。。'
+          }
+          console.log('初始化结束');
+        }
+      }
+      var box4 = new Box1('Felix4',3403)
+      var box5 = new Box1('Felix5',342685)
+
+
+
+
+  </script>
+  <body>
+
+  </body>
+</html>
