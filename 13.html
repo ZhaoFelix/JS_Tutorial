@@ -3,9 +3,60 @@
   <head>
     <meta charset="utf-8">
     <title>
-
+原型字面量
     </title>
+    <style media="screen">
+
+    </style>
   </head>
+  <script type="text/javascript">
+  //原型的封装
+  function Box() {}
+  // 普通的构造方法
+  Box.prototype.name = 'Felix';
+  Box.prototype.age = 100;
+  Box.prototype.run = function(){
+    return this.name + this.age + '普通构造方法。。'
+  }
+  //使用字面量的方式,这里的{}就是对象，是Object ，new Object()就相当于{}
+function Box1(){}
+  Box1.prototype = {
+    name:'Felix',
+    age:102,
+    run:function(){
+      return this.name + this.age + '子面量方法。。。';
+    }
+  }
+
+  //重写原型对象, 原型对象重写之后之前的对象属性不会被保存
+  // Box1.prototype = {
+  //   age:102
+  // }
+  var box = new Box();// 构造方法
+  var box1 = new Box1();//子面量方法
+
+  // alert(box.__proto__);//使用对象实例访问prototype的指针
+  // alert(Box.prototype);//使用构造函数名访问prototype
+  console.log(box.run());
+  console.log(box.constructor);
+
+  console.log(box1.run());
+  console.log(box1.constructor);
+
+
+  var arr = [1,4,5,6,78,9,0]
+  console.log(arr.sort());
+
+//查看sort是否是Array原型的方法
+  console.log(Array.prototype.sort);
+
+  //给字符串对象添加一个方法,对原生的方法进行添加
+  String.prototype.addString = function(str){
+    return this+str;
+  }
+  var str1 = 'Felix'
+  console.log(str1.addString('添加字符串'));
+  </script>
   <body>
 
   </body>
