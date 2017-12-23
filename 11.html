@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+      封装CSS库
+    </title>
+    <style media="screen">
+    #box {
+      font-size: 18px;
+      color: orange;
+    }
+    </style>
+  </head>
+  <script type="text/javascript">
+  var $ = function(){
+    return new Base();
+  }
+  function Base(){
+    // 创建一个数组用来保存获取的节点和节点数组
+    this.elements = [];
+    //获取ID节点
+    this.getId = function (id) {
+      this.elements.push(document.getElementById(id));
+      return this
+    };
+
+    // 获取元素的节点
+    this.getTagName = function(tag){
+      var tags = document.getElementsByTagName(tag);
+      for (var i = 0; i < tags.length; i++) {
+        this.elements.push(tags[i]);
+      }
+      console.log(tags.length);
+      return this;
+    }
+  }
+  Base.prototype.css = function(attr,value){
+    for (var i = 0; i < this.elements.length; i++) {
+      if (arguments.length==1) {
+        //根据属性名获取属性值
+        //return this.elements[i].style[attr];
+        //W3C
+        if (typeof window.getComputedSytle != 'undefined') {
+          return window.getComputedSytle(this.elements[i],null)[attr];
+        }
+        else if (typeof this.elements[i].currentStyle != 'undefined') {
+            return this.elements[i].currentStyle[attr]
+        }
+      }
+        this.elements[i].style[attr] = value;
+    }
+    return this;
+  }
+  Base.prototype.html = function(str) {
+      for (var i = 0; i < this.elements.length; i++) {
+        if (arguments.length==0) {
+          //如果参数为0,表示获取文本的内容
+          return this.elements[i].innerHTML;
+        }
+        this.elements[i].innerHTML = str;
+      }
+      return this;
+  }
+  Base.prototype.click = function(funcName){
+    for (var i = 0; i < this.elements.length; i++) {
+      this.elements[i].onclick = funcName;
+    }
+    return this;
+  }
+
+  //获取class的节点数组
+  Base.prototype.getClass = function(className){
+    //获取所有的节点
+    var all = document.getElementsByTagName('*');
+    for (var i = 0; i < all.length; i++) {
+      //如果获取的节点类名和传入的类名一致的话
+    if (all[i].className == className) {
+        return this.elements.push(all[i]);
+    }
+    }
+    return this;
+  }
+
+//获取某一个节点
+
+Base.prototype.getElement = function(num) {
+  var element = this.elements[num];
+  this.elements = [];
+  this.elements[0] = element;
+  return this;
+}
+  window.onload = function(){
+    //$().getId('box').html('pox').css('color','red');
+    //alert($().getId('box').html());
+    //alert($().getId('box').css('font-size'));
+    alert($().getClass('red').getElement(1).elements.length);
+  }
+  </script>
+  <body>
+    <div id="box" >
+      pox
+    </div>
+    <p class="red">段落</p>
+    <p class="red">段落</p>
+    <p>段落</p>
+  </body>
+</html>
