@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+cookie与存储（上）
+    </title>
+  </head>
+  <body>
+
+  </body>
+
+  <script type="text/javascript">
+
+  //谷歌浏览器不支持本地保存cookie
+
+
+
+
+    //向本地磁盘写入cookie
+    document.cookie = 'user=Felix';
+    console.log(document.cookie);
+
+    //如果存储的数据中包含中文，需要对其进行编码
+    document.cookie = 'user='+encodeURIComponent('赵庆飞');
+    console.log(decodeURIComponent(document.cookie));
+
+
+    //设置cookie的存储时间
+
+    var date = new Date();
+    date.setDate(date.getDate()+5);
+    console.log(date);
+  </script>
+</html>
