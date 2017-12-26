@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+事件对象
+    </title>
+  </head>
+  <script type="text/javascript">
+    // window.onclick = function(){
+    //   console.log('点击事件');
+    // }
+
+    function box(a,b){
+      console.log(arguments.length);//获取函数参数的数量
+    }
+
+    // window.onload = function() {
+    //   document.onclick = function () {
+    //     console.log(arguments.length);//默认绑定了一个对象
+    //   };
+    // }
+
+    　//鼠标事件
+
+    window.onload = function () {
+      document.onmouseup = function (evt) {
+        var e = evt|| window.event;//兼容IE
+        console.log(e.button);//0:左键；1:鼠标滚轮；2:鼠标右键
+        console.log(e.clientX,e.clientY);//获取点击的坐标
+      }
+    }
+  </script>
+  <body>
+
+  </body>
+</html>
