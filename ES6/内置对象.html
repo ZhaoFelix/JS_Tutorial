@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>内置对象扩展</title>
+    <style>
+        .text {
+            width: 100px;
+            height:50px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>10</li>
+    <li>101</li>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>3</li>
+    <li>4</li>
+    <li>4</li>
+    <li>4</li>
+    <li>4</li>
+</ul>
+<script>
+    //ES6的模版字符串
+    let  str = "你好";
+    let className = 'text';
+    let html = `<html>
+                  <head></head>
+                   <body>
+                     <p class="${className}">今天的天气很好${str}</p>
+                   </body>
+                </html>`;
+    console.log(html);
+
+    //数组扩展
+    //Array.form
+     let allLi = document.querySelectorAll('li');
+    console.log(Array.from(allLi));
+
+    //Array.of
+    console.log(Array.of(1, 2, 3, 4));
+
+
+    //函数的扩展——形参设置默认值
+    function  sum(num1,num2) {
+        //ES5语法
+        num1 = num1 || 10;
+        num2 = num2 || 10;
+        console.log(num1+num2);
+    }
+    sum();
+  function sum2(num1=10,num2=10) {
+      console.log(num1 + num2);
+  }
+  sum2();
+
+  //参数的形式
+    function sum3() {
+        let result = 0;
+        for (let value of arguments ){
+            result += value;
+        }
+        return result;
+    }
+    console.log(sum3(10, 20, 203, 2, 4));
+
+    //ES6实现
+    function sum4(name,...nums){
+        let result = 0;
+        for (let value of nums ){
+            result += value;
+        }
+        return result;
+    }
+    console.log(sum4('张三',10, 20, 203, 2, 4));
+
+    //箭头函数
+    let sum5 = (num1,num2)=>{return num1+num2};
+    console.log(sum5(100, 100));
+</script>
+</body>
+</html>

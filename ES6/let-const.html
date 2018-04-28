@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>变量和常量的声明</title>
+</head>
+<body>
+<button>按钮</button>
+<button>按钮</button>
+<button>按钮</button>
+<button>按钮</button>
+<button>按钮</button>
+</body>
+</html>
+<script>
+    //作用域局限于当前的代码快
+    {
+        var str = '张三';
+        console.log(str);
+
+        let str1 = '李四';
+        console.log(str1);
+    }
+    console.log(str);
+    console.log(str1);//无法被找到
+
+    //作用域不会被提升
+    {
+        console.log(str1);
+        var str1 = 'Felix';
+    }
+    //相同的作用域不能声明相同的变量
+    {
+        var str2 = '234';
+        var str2 = '2134r';
+        console.log(str2);
+
+        let str3 = '213';
+//        let str3 = '123r';
+       // console.log(str3);重复声明导致程序报错
+
+    }
+
+//    var btns = document.querySelectorAll('button');
+//    for (var i=0;i<btns.length;i++){
+//        btns[i].onclick = function () {
+//            alert('点击了第'+i+'个按钮');
+//        }
+//    }
+
+    //ES5的闭包实现
+//    var btns = document.querySelectorAll('button');
+//    for(var i=0;i<btns.length;i++){
+//        (function (i) {
+//            btns[i].onclick = function () {
+//                alert('点击了第'+i+'个按钮');
+//            }
+//        })(i);
+//    }
+
+    // ES6语法实现
+     let btns = document.querySelectorAll('button');
+    for (let i=0;i<btns.length;i++){
+        btns[i].onclick = function () {
+            alert("点击了第"+i+"个按钮");
+
+        }
+    }
+
+    for(let i=0;i<5;i++){
+        console.log(i);
+
+    }
+  //const与let的不同
+    //const声明的常量必须赋值
+
+
+
+</script>

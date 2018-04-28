@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/underscore.js"></script>
+    <style>
+        body {
+            margin: 150px;
+        }
+        #canvas {
+            box-shadow: 0 0 10px #000;
+        }
+    </style>
+</head>
+<body>
+<canvas id="canvas">当前浏览器不支持canvas</canvas>
+<script>
+   //获取当前画布
+    const  canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext("2d");
+    canvas.width = 1000;
+    canvas.height = 600;
+    canvas.style.background = '#000';
+    //类
+    class  Ball{
+        constructor(x,y,color){
+            this.x = x;
+            this.y = y;
+            this.color = color;
+            this.r = 40;
+        }
+        //绘制渲染
+        render(){
+            ctx.save();
+            ctx.beginPath();
+            ctx.arc(this.x,this.y,this.r,0,Math.PI*2);
+            ctx.fillStyle = this.color;
+            ctx.fill();
+            ctx.restore();
+        }
+    }
+    //移动类
+   class  MoveBall extends  Ball {
+        constructor(x,y,color){
+            super(x,y,color);
+            this.dx = Math.random(-5,5);
+            this.dY = _.random(-5,5);
+            this.dR = _.random(1,3);
+        }
+        upDate(){
+            this.x += this.dX;
+            this.y += this.dY;
+            this.r -= this.dR;
+            if(this.r<0){
+                this.r = 0;
+            }
+        }
+   }
+   //实例化小球
+   let ballArr = [];
+   let colorArr = ['red','green','yellow','blue','white','purple'];
+    //鼠标监听
+   canvas.addEventListener("mousemove",function (e) {
+//       let e = e || event;
+       let ball = new MoveBall(e.offsetX,e.offsetY,colorArr[_.random(0,colorArr.length-1)]);
+       ballArr.push(ball);
+//       console.log(ballArr);
+   })
+   //开启定时器
+    setInterval(function () {
+        ctx.clearRect(0,0,canvas.width,canvas.height);
+        for(let i=0;i<ballArr.length;i++){
+            ballArr[i].render();
+            ballArr[i].upDate();
+        }
+    },50)
+</script>
+</body>
+</html>

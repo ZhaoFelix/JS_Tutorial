@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>set</title>
+</head>
+<body>
+<script>
+    //set中的数据是唯一的
+    //创建set
+    let  set = new Set(['s','w','we']);
+
+    //属性
+    console.log(set.size);//长度
+    //方法
+    set.add('s3');
+   //set.clear();//集合清空
+    console.log(set.delete('s'));
+    console.log(set.has('w'));
+    set.add('12').add('23');
+    console.log(set);
+
+
+
+    //Map
+    //对象：字符串-值；Map:值-值
+    let oht = ' qita';
+    let map = new Map([
+        ['name','张三'],
+        ['age',23],
+        ['sex','男'],
+        [oht,'qita']
+    ]);
+   //属性
+    console.log(map.size);
+    map.set('na','we');
+    console.log(map.get('na'));
+
+    console.log(map);
+
+    // 遍历
+    map.forEach(function (value,index) {
+        console.log(value);
+        console.log(index);
+    });
+
+
+
+</script>
+</body>
+</html>

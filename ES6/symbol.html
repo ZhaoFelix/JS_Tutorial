@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>symbol</title>
+</head>
+<body>
+<script>
+  let str = Symbol();
+  let str2 = Symbol();
+  console.log(str == str2);
+
+  //构造函数
+    function Person(name,age) {
+        this.name = name;
+        this.age = age;
+    }
+    Person.prototype = {
+         constructor:Person,
+        print(){
+            console.log(this.name);
+            console.log(this.age);
+        }
+    }
+    let person = new  Person('qwe','2e');
+    console.log(person);
+
+    class  People {
+        constructor(name,age){
+            this.name = name;
+            this.age = age;
+        }
+        print(){
+            console.log(this.name+this.age);
+        }
+    }
+
+    let people = new People('wed','12');
+    people.print();
+
+</script>
+
+</body>
+</html>
