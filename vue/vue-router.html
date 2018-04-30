@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue-router</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+        body {
+            background-color: #e8e8e8;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+  <div class="row">
+      <div class="col-xl-8 col-xl-offset-2">
+          <div class="page-header">
+              <h1>IT</h1>
+          </div>
+      </div>
+  </div>
+    <div class="row">
+        <div class="col-xl-2 col-xl-offset-2">
+            <div class="list-group">
+                <router-link to="/h5">H5</router-link>
+                <router-link to="/java">Java</router-link>
+                <router-link  to="python">Python</router-link>
+            </div>
+        </div>
+        <div class="col-xl-6">
+            <div class="panel-body">
+                <router-view></router-view>
+            </div>
+        </div>
+
+    </div>
+</div>
+<template id="h5">
+    <div>
+        <h2>HTML</h2>
+        <p>HTML学习</p>
+    </div>
+</template>
+<template id="java">
+    <div>
+        <h2>Java</h2>
+        <p>Java学习</p>
+    </div>
+</template>
+<template id="python">
+    <div>
+        <h2>Python</h2>
+        <p>Python学习</p>
+    </div>
+</template>
+
+<script src="js/vue.min.js"></script>
+<script src="js/vue-router.min.js"></script>
+<script>
+    const html5 = Vue.extend({
+        template:'#h5'
+    });
+    const java  = Vue.extend({
+        template:'#java'
+    });
+    const  python = Vue.extend({
+        template:'#python'
+    });
+    //定义路由
+    const  routers = [
+        {path:'/h5',component:html5},
+        {path:'/java',component:java},
+        {path:'/python',component:python},
+        //配置根路由
+        {path:'/',redirect:'/h5'}
+    ];
+    //创建路由实例
+    　const  router = new VueRouter({
+         routers
+     });
+    //挂在router
+    new Vue({
+
+    });
+</script>
+</body>
+</html>

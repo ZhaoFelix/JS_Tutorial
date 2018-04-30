@@ -9,6 +9,12 @@
  <my-slot>
      <h4>替换的内容</h4>
  </my-slot>
+  <my-slot2>
+         <div slot="CPU">CPU</div>
+      <div slot="GPU">GPU</div>
+      <div slot="memory">内存</div>
+      <div slot="hard-drive">硬盘</div>
+  </my-slot2>
 </div>
 <!--匿名插槽-->
 <template id="my-slot">
@@ -24,7 +30,10 @@
 <!--实名插槽-->
 <template id="my-slot2">
  <div id="main">
-     
+      <slot name="cpu">这里是插槽的CPU</slot>
+      <slot name="GPU">这里是插槽的GPU</slot>
+      <slot name="memory"> 内存条</slot>
+      <solt name="hard-drive">硬盘</solt>
  </div>
 </template>
 <script src="js/vue.min.js"></script>
@@ -32,6 +41,10 @@
     Vue.component('my-slot',{
         template:'#my-slot'
     });
+
+    Vue.component('my-slot2',{
+        template:'#my-slot2'
+    })
 
     new Vue({
         el:'#app',

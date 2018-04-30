@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="341a0589-5417-4135-b08c-91e06066bed6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/slot.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/template-script.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/多层组件通信.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/父子组件.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/组件.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/组件通信.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/自定义事件.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/验证data必须是函数.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/vue-router.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vue_Tutorial/package-lock.json" afterPath="$PROJECT_DIR$/Vue_Tutorial/package-lock.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vue_Tutorial/package.json" afterPath="$PROJECT_DIR$/Vue_Tutorial/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vue/slot.html" afterPath="$PROJECT_DIR$/vue/slot.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,18 +23,7 @@
     <favorites_list name="JS_Tutorial" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="slot.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/vue/slot.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="535">
-              <caret line="26" column="5" lean-forward="false" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -51,6 +36,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>height</find>
+      <find>col-xl</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -85,6 +71,7 @@
         <option value="$PROJECT_DIR$/vue/多层组件通信.html" />
         <option value="$PROJECT_DIR$/vue/自定义事件.html" />
         <option value="$PROJECT_DIR$/vue/slot.html" />
+        <option value="$PROJECT_DIR$/vue/vue-router.html" />
       </list>
     </option>
   </component>
@@ -101,8 +88,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="722" />
-    <option name="width" value="718" />
+    <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
   <component name="ProjectView">
@@ -258,12 +244,12 @@
       <option name="presentableId" value="Default" />
       <updated>1524918615359</updated>
       <workItem from="1524918620652" duration="8802000" />
-      <workItem from="1524971053215" duration="16624000" />
+      <workItem from="1524971053215" duration="20879000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25426000" />
+    <option name="totallyTimeSpent" value="29681000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -275,10 +261,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="722" y="0" width="718" height="900" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3468208" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34653464" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32965687" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -345,6 +330,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="647">
           <caret line="45" column="4" lean-forward="false" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -532,8 +518,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vue/slot.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="26" column="5" lean-forward="false" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+        <state relative-caret-position="330">
+          <caret line="15" column="31" lean-forward="false" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="619" column="21" lean-forward="false" selection-start-line="619" selection-start-column="15" selection-end-line="619" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/vue-router.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="29" column="28" lean-forward="false" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
           <folding />
         </state>
       </provider>
