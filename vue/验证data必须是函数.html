@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>验证组件的data必须是函数</title>
+</head>
+<body>
+<div id="app">
+    <btn></btn>
+    <btn></btn>
+    <btn></btn>
+    <btn></btn>
+    <btn></btn>
+    <btn></btn>
+    <btn></btn>
+
+</div>
+<!--组册一个组件-->
+<template id="my-btn">
+    <button @click="counter+=1">点击的次数:{{counter}}</button>
+</template>
+<script src="js/vue.min.js"></script>
+<script>
+    //实例化组件
+    let data = {
+        counter:0
+    }
+    Vue.component('btn',{
+       template:'#my-btn',
+        data(){
+           //return data; //data被共享了
+//           return {
+//               counter:0
+//           }
+        }
+    });
+    new Vue({
+        el:'#app',
+        data:{
+
+        }
+    })
+</script>
+</body>
+</html>

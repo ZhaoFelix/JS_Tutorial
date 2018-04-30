@@ -2,16 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="341a0589-5417-4135-b08c-91e06066bed6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/pratice.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/property.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/v-else.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/v-for.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/v-for2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/v-if.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/v-text.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/vue-once.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/slot.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/template-script.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/多层组件通信.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/父子组件.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/组件.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/组件通信.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/自定义事件.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/验证data必须是函数.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -30,11 +28,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="property.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/vue/property.html">
+      <file leaf-file-name="slot.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vue/slot.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="601">
-              <caret line="61" column="43" lean-forward="false" selection-start-line="61" selection-start-column="43" selection-end-line="61" selection-end-column="43" />
+            <state relative-caret-position="535">
+              <caret line="26" column="5" lean-forward="false" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -78,6 +76,15 @@
         <option value="$PROJECT_DIR$/vue/v-text.html" />
         <option value="$PROJECT_DIR$/vue/pratice.html" />
         <option value="$PROJECT_DIR$/vue/property.html" />
+        <option value="$PROJECT_DIR$/vue/组件.html" />
+        <option value="$PROJECT_DIR$/ES6/父子组件.html" />
+        <option value="$PROJECT_DIR$/vue/父子组件.html" />
+        <option value="$PROJECT_DIR$/vue/template-script.html" />
+        <option value="$PROJECT_DIR$/vue/验证data必须是函数.html" />
+        <option value="$PROJECT_DIR$/vue/组件通信.html" />
+        <option value="$PROJECT_DIR$/vue/多层组件通信.html" />
+        <option value="$PROJECT_DIR$/vue/自定义事件.html" />
+        <option value="$PROJECT_DIR$/vue/slot.html" />
       </list>
     </option>
   </component>
@@ -154,6 +161,11 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="FullScreen" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/vue" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -246,12 +258,12 @@
       <option name="presentableId" value="Default" />
       <updated>1524918615359</updated>
       <workItem from="1524918620652" duration="8802000" />
-      <workItem from="1524971053215" duration="9344000" />
+      <workItem from="1524971053215" duration="16624000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18146000" />
+    <option name="totallyTimeSpent" value="25426000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -444,8 +456,84 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vue/property.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="601">
-          <caret line="61" column="43" lean-forward="false" selection-start-line="61" selection-start-column="43" selection-end-line="61" selection-end-column="43" />
+        <state relative-caret-position="95">
+          <caret line="39" column="7" lean-forward="false" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/组件.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding>
+            <marker date="1525054648881" expanded="true" signature="277:372" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ES6/父子组件.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/父子组件.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+          <folding>
+            <marker date="1525055202460" expanded="true" signature="525:592" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/template-script.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="28" column="9" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/验证data必须是函数.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="536">
+          <caret line="30" column="36" lean-forward="false" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/组件通信.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="18" lean-forward="false" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/多层组件通信.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="16" lean-forward="true" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/自定义事件.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="11" column="34" lean-forward="false" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/slot.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="26" column="5" lean-forward="false" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
           <folding />
         </state>
       </provider>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组件通信</title>
+</head>
+<body>
+<div id="app">
+ <my-div message="今天要下雨!"></my-div>
+</div>
+
+<template id="my-div">
+    <div>
+      <p>{{message}}</p>
+    </div>
+</template>
+<script src="js/vue.min.js"></script>
+<script >
+    Vue.component('my-div',{
+        template:'#my-div',
+        props:['message']
+    })
+    new Vue({
+       el:'#app',
+        data:''
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+   <parent></parent>
+</div>
+<script src="js/vue.min.js"></script>
+<script>
+//子组件
+let Child = Vue.extend({
+        template:`
+              <img src="" alt="" width="200">
+        `
+});
+let Child2 = Vue.extend({
+    template:`
+              <p>今天天气很好！</p>
+        `
+});
+//父组件
+Vue.component('parent',{
+    components:{
+        'child1':Child,
+        'child2':Child2
+    },
+    template:`
+            <div>
+            <child1></child1>
+            <child2></child2>
+</div>
+    `
+});
+new Vue({
+    el:'#app',
+    data:{
+
+    }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>slot</title>
+</head>
+<body>
+<div id="app">
+ <my-slot>
+     <h4>替换的内容</h4>
+ </my-slot>
+</div>
+<!--匿名插槽-->
+<template id="my-slot">
+    <div id="pannel">
+        <h2 class="head">头部</h2>
+        <!--预留一个插槽-->
+        <slot>
+            可以替换任何标签
+        </slot>
+        <footer>尾部</footer>
+    </div>
+</template>
+<!--实名插槽-->
+<template id="my-slot2">
+ <div id="main">
+     
+ </div>
+</template>
+<script src="js/vue.min.js"></script>
+<script>
+    Vue.component('my-slot',{
+        template:'#my-slot'
+    });
+
+    new Vue({
+        el:'#app',
+        data:{
+
+        }
+    });
+</script>
+</body>
+</html>

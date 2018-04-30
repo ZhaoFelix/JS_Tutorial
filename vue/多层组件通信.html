@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>多层组件通信</title>
+</head>
+<body>
+<div id="app">
+
+</div>
+<template id="my-div">
+    <p>{{}}</p>
+</template>
+<script src="js/vue.min.js"></script>
+<script>
+    let child = Vue.extend({
+        template:'#my-div',
+        props:['']
+    });
+    new Vue({
+        el:'#app',
+        data:{
+            title:'今天天气很好！'
+        }
+    })
+</script>
+</body>
+</html>
