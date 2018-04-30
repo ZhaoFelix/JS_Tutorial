@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-for练习</title>
+</head>
+<style>
+    table {
+        width: 600px;
+        border:  1px solid red;
+        text-align: center
+    }
+    thead {
+        background-color: orangered;
+    }
+</style>
+<body>
+<div id="app">
+  <table>
+      <thead>
+      <tr>
+          <td>姓名</td>
+          <td>年龄</td>
+          <td>性别</td>
+      </tr>
+      </thead>
+      <tbody v-for="per in person ">
+        <tr>
+            <td>{{per.name}}</td>
+            <td>{{per.age}}</td>
+            <td>{{per.sex}}</td>
+        </tr>
+      </tbody>
+  </table>
+</div>
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+          person:[
+              {name:'12',age:34,sex:'F'},
+              {name:'12',age:34,sex:'F'},
+              {name:'12',age:34,sex:'F'},
+              {name:'12',age:34,sex:'F'},
+              {name:'12',age:34,sex:'F'}
+          ]
+        }
+    })
+</script>
+</body>
+</html>

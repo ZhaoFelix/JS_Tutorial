@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-if</title>
+</head>
+<body>
+<div id="app">
+    <p v-if="show">
+      要显示
+    </p>
+    <p v-if="hide">
+        不显示
+    </p>
+    <!-- v-show 创建元素 -->
+    <p v-show="hide">不显示</p>
+    <p v-if="height>1.75">
+        小明的身高：{{height}} m
+    </p>
+
+</div>
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            msg:'你好！',
+            show:true,
+            hide:false,
+            height:1.68
+        }
+    });
+</script>
+</body>
+</html>

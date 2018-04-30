@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计算属性</title>
+</head>
+<body>
+<div id="app">
+  <p>
+      初始值：{{name}}
+  </p>
+    <p>
+        翻转值：{{reverseStr()}}
+    </p>
+    <p>
+        计算属性:{{reverse}}
+    </p>
+</div>
+<div class="app">
+   <p>
+       {{firstName}}
+   </p>
+    <p>
+        {{lastName}}
+    </p>
+    <p>{{fullName}}</p>
+    <button @click='setter()'>调用setter方法</button>
+</div>
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+       el:'#app',
+        data:{
+           name:'Felix'
+        },
+        methods:{
+           reverseStr(){
+               return this.name.split('').reverse().join('');
+           }
+        },
+        //计算属性
+        computed:{
+            //get
+            reverse(){
+                return this.name.split('').reverse().join('');
+            }
+        }
+    });
+    new Vue({
+        el:'.app',
+        data:{
+            firstName:'Felix',
+            lastName:'Zhao'
+        },
+        computed:{
+            fullName(){
+                return this.firstName+' '+this.lastName
+            }
+        },
+        methods:{
+            setter(){
+                this.fullName = 'Tom Lily';
+            }
+        }
+    });
+</script>
+</body>
+</html>

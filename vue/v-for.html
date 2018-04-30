@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-for</title>
+</head>
+<body>
+<div id="app">
+    <!--遍历数组-->
+ <p v-for="(sc,index) in score">
+ {{index+':'+sc}}
+ </p>
+    <!--遍历对象-->
+    <p v-for="d in dog">
+       {{d}}
+    </p>
+</div>
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            score:[100,23,234,56,23],
+            dog:{name:'旺财',age:12,sex:'公'}
+        }
+    });
+</script>
+</body>
+</html>

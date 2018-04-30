@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <p>{{message}}</p>
+    <input type="text" v-model="message">
+</div>
+<script src="js/vue.min.js"></script>
+<script>
+    //创建vue的实例
+    let vue = new Vue({
+       el:'#app',
+        data:{
+           message:'hello Vue'//vue中的model->数据
+        }
+    });
+
+</script>
+</body>
+</html>
